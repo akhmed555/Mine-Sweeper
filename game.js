@@ -283,30 +283,33 @@
          this.checkWinCondition();
       }
 
-      toggleFlag(index, div, flagCounterContainer) {
-         const cell = this.field[index];
-         if (cell.isOpen) return;
+     toggleFlag(index, div, flagCounterContainer) {
+    const cell = this.field[index];
+    if (cell.isOpen) return;
 
-         if (!cell.isFlagged && !cell.isQuestioned) {
-            cell.isFlagged = true;
-            this.remainingFlags--;
-            div.classList.remove("cell-closed");
-            div.classList.add("cell-flag");
-         } else if (cell.isFlagged) {
-            cell.isFlagged = false;
-            cell.isQuestioned = true;
-            this.remainingFlags++;
-            div.classList.remove("cell-flag");
-            div.classList.add("cell-question");
-         } else if (cell.isQuestioned) {
-            cell.isQuestioned = false;
-            div.classList.remove("cell-question");
-            div.classList.add("cell-closed");
-         }
+    if (!cell.isFlagged && !cell.isQuestioned) {
+       
+        if (this.remainingFlags <= 0) return;
 
-         this.updateDigits(flagCounterContainer, this.remainingFlags);
-         this.checkWinCondition();
-      }
+        cell.isFlagged = true;
+        this.remainingFlags--;
+        div.classList.remove("cell-closed");
+        div.classList.add("cell-flag");
+    } else if (cell.isFlagged) {
+        cell.isFlagged = false;
+        cell.isQuestioned = true;
+        this.remainingFlags++;
+        div.classList.remove("cell-flag");
+        div.classList.add("cell-question");
+    } else if (cell.isQuestioned) {
+        cell.isQuestioned = false;
+        div.classList.remove("cell-question");
+        div.classList.add("cell-closed");
+    }
+
+    this.updateDigits(flagCounterContainer, this.remainingFlags);
+    this.checkWinCondition();
+}
 
       revealAllCells(gameBoard) {
          this.field.forEach((cell, index) => {
