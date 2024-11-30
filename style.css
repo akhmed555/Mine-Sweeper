@@ -1,0 +1,169 @@
+
+.sprite {
+  width: 16px;
+  height: 16px;
+  background-image: url("img/sprite.png");
+}
+
+.digit {
+  width: 13px;
+  height: 23px;
+  background-image: url("img/sprite.png");
+}
+
+.digit-0 {
+  background-position: -126px -84px;
+}
+
+.digit-1 {
+  background-position: 139px -84px;
+}
+
+.digit-2 {
+  background-position: -14px -84px;
+}
+
+.digit-3 {
+  background-position: -28px -84px;
+}
+
+.digit-4 {
+  background-position: -42px -84px;
+}
+
+.digit-5 {
+  background-position: -56px -84px;
+}
+
+.digit-6 {
+  background-position: -70px -84px;
+}
+
+.digit-7 {
+  background-position: -84px -84px;
+}
+
+.digit-8 {
+  background-position: -98px -84px;
+}
+
+.digit-9 {
+  background-position: -112px -84px;
+}
+
+.cell-flag {
+  background-position: -17px -51px;
+}
+
+.cell-open {
+  background-position: -17px -51px;
+}
+
+.cell-closed {
+  background-position: 0px -51px;
+}
+
+.cell-question {
+  background-position: -51px -51px;
+}
+
+.cell-flag {
+  background-position: -34px -51px;
+}
+
+.cell-number-1 {
+  background-position: 0px -68px;
+}
+
+.cell-number-2 {
+  background-position: -17px -68px;
+}
+
+.cell-number-3 {
+  background-position: -34px -68px;
+}
+
+.cell-number-4 {
+  background-position: -51px -68px;
+}
+
+.cell-number-5 {
+  background-position: -68px -68px;
+}
+
+.cell-number-6 {
+  background-position: -85px -68px;
+}
+
+.cell-number-7 {
+  background-position: -102px -68px;
+}
+
+.cell-number-8 {
+  background-position: -119px -68px;
+}
+
+.cell-number-9 {
+  background-position: -136px -68px;
+}
+
+.game-main {
+  border: 10px solid #C7BDB1;
+  border-radius: 2px;
+  min-width: 80px;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+.game-info {
+  min-height: 12px;
+}
+
+.game-board {
+  display: grid;
+  width: -moz-max-content;
+  width: max-content;
+  margin: 0 auto;
+  border-top: 10px solid #C7BDB1;
+}
+
+.cell {
+  width: 16px;
+  height: 16px;
+}
+
+.cell-mine {
+  background-position: -85px -51px;
+}
+
+.mine-x {
+  background-position: -119px -51px;
+}
+
+.panel-top {
+  padding: 0 10px;
+  height: 35px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.count-flags {
+  font-size: 0;
+}
+
+.timer {
+  font-size: 0;
+}
+
+.count-flags span {
+  display: inline-block;
+}
+
+.timer span {
+  display: inline-block;
+}
+
+.smile {
+  cursor: pointer;
+  font-size: 20px;
+}/*# sourceMappingURL=style.css.map */
